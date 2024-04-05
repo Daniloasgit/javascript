@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || JAVASCRIPT</title>
+    <style>
+        body {
+            background-color: rgb(0, 18, 78);
+            color: yellowgreen;
+            font: normal 18pt "Arial";
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Entendendo o DOM</h1>
+    <p>Postando os resultados </p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript e destaque o DOM</p> 
+
+        <div id="msg">
+        Clique aqui
+        </div>
+
+
+    <script>
+
+var p1 = document.getElementsByTagName('p') [1];       
+window.document.write("ESSE É O TEXTO: " + p1.innerHTML);
+p1.style.color = "black";
+var corpo = window.document.body
+corpo.style.background = "lightyellow";  
+var d = window.document.getElementById('msg')
+d.innerText = "estou chegando"
+d.style.background = "red";
+  </script>
+</body>
+</html>
