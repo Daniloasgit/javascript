@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || JAVASCRIPT</title>
+    <style>
+        div#area {
+            background-color: #00124e;
+            color: yellow;
+            font: normal 18pt "Arial";
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseleave="vazou()">Clique aqui</div>
+
+        <script>
+        function clicar(){
+            var texto = window.document.getElementById("area");
+            texto.innerText = "Clicou!"
+        }
+            function entrar() {
+                var texto = window.document.getElementById("area");
+                texto.style.background = "green";
+                texto.style.color = "blue";
+                texto.innerText = "Entrou!"
+            }
+
+            function vazou() {
+                var texto = window.document.getElementById("area");
+                texto.innerText = "vazou!";
+                texto.style.background = "yellow";
+                texto.style.color = "green";
+            }
+
+
+        
+
+</script>
+
+</body>
+</html>
