@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSE - SENAI</title>
+</head>
+<body>
+    
+    <h1>Verificação de idade para votação</h1>
+    <span>Digite sua idade: </span>
+    <input type="number" id="idade" class="cidade" >
+    <br>
+    <input type="button" value="Verificar" onclick="verificarIdadeParaVoto()">
+    <br>
+    <div class="resultado" id="res"></div>
+
+    <script>
+        function verificarIdadeParaVoto() {
+            var idade = window.document.getElementById("idade").value;
+            
+if (idade <16 ) {
+    console.log('Não vota')
+mensagem = 'não vota'
+
+} else if (idade < 18 || idade >= 65) {
+    console.log('voto opcional')
+    mensagem = 'voto opcional'
+
+} else {
+    console.log('voto obrigatorio')
+    mensagem = 'voto obrigatorio'
+}
+
+document.getElementById('res').innerHTML = `você tem ${idade} anos. ${mensagem}`
+        }
+    </script>
+
+
+
+</body>
+</html>
